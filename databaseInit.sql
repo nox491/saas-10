@@ -1,5 +1,5 @@
-DROP TABLE answers, keywords, questions, users;
-DROP SCHEMA QATest;
+--DROP TABLE answers, keywords, questions, users;
+--DROP SCHEMA QATest;
 
 CREATE SCHEMA QATest;
 
@@ -7,7 +7,8 @@ CREATE TABLE users(
    user_id SERIAL UNIQUE,
    email_address       TEXT  NOT NULL,
    passwrd            TEXT NOT NULL,
-   PRIMARY KEY(user_id, email_address)
+   PRIMARY KEY(user_id),
+   UNIQUE(email_adress)
 );
 
 CREATE TABLE questions(
