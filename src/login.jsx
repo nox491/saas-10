@@ -33,15 +33,19 @@ class Login extends Component {
                   }
 
                   
+                  
                   //headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 });
+                window.location='/'
+                localStorage.setItem("token",jwt.user_access_token)
               } catch(error){
                 alert(error.response.data.message)
                 this.setState({
                   error: error.response.data.message,
                 })
               }
-                //localStorage.setItem("token",jwt.user_access_token)
+              
+                
                 
                          
       };

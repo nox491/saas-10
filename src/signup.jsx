@@ -36,6 +36,7 @@ try{
             
               //headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             });
+            window.location='/'
           } catch(error){
             alert(error.response.data.message)    
             this.setState({             

@@ -1,7 +1,7 @@
 import React , { Component }from 'react';
 import img_period from "../assets/img/scenery/image5.jpg";
 import img_keyword from "../assets/img/scenery/image6.jpg";
-import "/Users/vangelis/Desktop/AskMeAnything/askmeanything/src/assets/bootstrap/css/Mainpage/mainbody.css";
+import "../assets/bootstrap/css/Mainpage/mainbody.css";
 import {RemoveScrollBar} from 'react-remove-scroll-bar';
 
   class MainBody extends Component {

@@ -1,5 +1,5 @@
 import React , { Component }from 'react';
-import "/Users/vangelis/Desktop/AskMeAnything/askmeanything/src/assets/bootstrap/css/footer.css";
+import "../assets/bootstrap/css/footer.css";
 
   class Footer extends Component {
       state = { 
