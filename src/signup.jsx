@@ -21,7 +21,7 @@ class Signup extends Component {
           alert("Passwords don't match");
          }
          else{
-try{
+    try{
           const email = this.state.email
           const pass = this.state.password
           
@@ -34,7 +34,6 @@ try{
                  password : pass
               },
             
-              //headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             });
             window.location='/'
           } catch(error){

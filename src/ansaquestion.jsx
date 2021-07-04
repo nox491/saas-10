@@ -1,24 +1,87 @@
-import React , { Component }from 'react';
+import React , { Component, useState, useEffect } from "react";
+import Dropdown from 'react-bootstrap/Dropdown'
 import logo from "./assets/img/AMA_logo_trans.png";
+import axios from 'axios';
+import _ from 'lodash';
 
 
   class Answer extends Component {
-      state = { 
-         
+    constructor(props) {
+      super(props)
+      this.state = { 
+         questions : [],
+         searchTerm : "",
+         isLoading : false,
+         error: ""
+      };
+      this.handleSearchText = _.debounce(this.onSearchText, 500);
+  }
+      
+  onSearchText = async () => {
+    try {
+    this.setState({ isLoading: true });
+          
+            const keyword = this.state.searchTerm
+            const {data : questions} = await axios({
+              method: 'get',
+              url: "http://localhost:3001/searchQ",
+            
+              params : {
+                keyword: keyword
+              },
+              headers: {
+                'x-observatory-auth': localStorage.getItem("token")
+             }
+             
+            });
+            this.setState({questions})
+            this.setState({isLoading: false})
+
+          } catch(error){
+            alert(error.response.data.message)
+            this.setState({
+              error: error.response.data.message,
+            })
+          } 
+          
+        };
+
+      handleChange = event => {
+        const searchTerm = event.target.value;
+        this.setState({searchTerm});
+        this.handleSearchText(this.state.searchTerm);
       }
-      render() { 
+
+      handleClick=(e)=>{
+           alert(e.currentTarget.getAttribute("value"));
+        }
+
+      renderListData() {
+        return this.state.questions.map((question) => {
+          const { questionTitle } = question
           return (
-          
-          
+            <Dropdown.Item>
+            <li onClick={this.handleClick} value={questionTitle}>{questionTitle}</li>
+            </Dropdown.Item>
+          )
+        })
+    }
+
+      render() {
+        
+        return (
+      
         <React.Fragment>
           <section className="contact-clean">
-        <form method="post">
+           <form method="post">
           <h2 className="text-center">Answer a question</h2>
-          <div className="form-group">
-            <div className="dropdown"><button className="btn btn-primary dropdown-toggle" aria-expanded="false" data-toggle="dropdown" type="button" style={{width: '400px', background: '#ff6f6ca6 !important'}}>Question Titles&nbsp;</button>
-              <div className="dropdown-menu" style={{width: '400px'}}><a className="dropdown-item" href="#">First Item</a><a className="dropdown-item" href="#">Second Item</a><a className="dropdown-item" href="#">Third Item</a></div>
-            </div>
-          </div><small className="form-text text-muted">(Keywords, read-only)</small><small className="form-text text-muted" style={{height: '40px'}}>Other Answers, if available, can be shown here</small><textarea className="form-control" name="Answer Text" placeholder="Type your answer here" rows={14} defaultValue={""} />
+          <label htmlFor="search">Search by Keyword</label>
+            <input type="text" name="searchTerm" value={this.state.searchTerm} onChange={this.handleChange}/>
+            {this.state.isLoading && <div>Loading...</div>}
+            <ul className="search-result">
+              {this.renderListData()}
+            </ul>
+          <textarea className="form-control" name="Answer Text" placeholder="Type your answer here" rows={14} defaultValue={""} />
           <div className="form-group"><button className="btn btn-primary" type="submit" style={{background: '#FF6F6C !important'}}>Submit</button></div><a href="/home"><img src={logo} width={220} style={{marginBottom: '65px'}} /> </a>
         </form>
       </section>
@@ -26,6 +89,7 @@ import logo from "./assets/img/AMA_logo_trans.png";
         
         
         );
+            
       }
   }
    

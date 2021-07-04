@@ -29,12 +29,9 @@ class Login extends Component {
                 
                   data: {
                     email : email, 
-                     password : pass
+                    password : pass
                   }
 
-                  
-                  
-                  //headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 });
                 window.location='/'
                 localStorage.setItem("token",jwt.user_access_token)
@@ -43,11 +40,7 @@ class Login extends Component {
                 this.setState({
                   error: error.response.data.message,
                 })
-              }
-              
-                
-                
-                         
+              }   
       };
 
 
