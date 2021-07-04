@@ -3,10 +3,10 @@ import logo from "../assets/img/AMA_logo_trans.png";
 import "../assets/bootstrap/css/footer.css";
 
   class NavbarRe extends Component {
+    
       
       render() { 
           return (
-          
           
         <React.Fragment>
           <div id="navbar">
@@ -20,8 +20,6 @@ import "../assets/bootstrap/css/footer.css";
             </div>
           </div>
         </nav>
-        
-        
       </div>
         </React.Fragment>
         

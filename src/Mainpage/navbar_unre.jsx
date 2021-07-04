@@ -21,8 +21,6 @@ import "../assets/bootstrap/css/footer.css";
             </div>
           </div>
         </nav>
-        
-        
       </div>
         </React.Fragment>
         
@@ -31,4 +29,4 @@ import "../assets/bootstrap/css/footer.css";
       }
   }
    
-  export default NavbarUnRe ;
+  export default NavbarUnRe;
