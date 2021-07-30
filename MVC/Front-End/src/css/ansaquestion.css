@@ -1,0 +1,65 @@
+#ansaquestion {
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#keywordsearch {
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#ansaquestionsearch {
+  margin-top: 1%;
+  margin-left: 10%;
+  width: 80%;
+}
+
+#loading {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#dropdownitem {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.dropdown-item {
+    position: relative;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    text-align: right;
+  }
+
+  #questiondata {
+    margin-top: 1%;
+    margin-left: 9.3%;
+    margin-right: 9.3%;
+  }
+
+  #ansTitle {
+    position: relative;
+  }
+
+  #q2Content {
+    position: relative;
+  }
+
+  #answerdata {
+    margin-left: 9.3%;
+    margin-right: 9.3%;
+  }
+
+  #ansContent {
+    margin-left: 10%;
+    width: 80%
+  }
+
+  #submitAns {
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  
