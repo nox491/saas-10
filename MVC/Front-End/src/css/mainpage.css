@@ -1,0 +1,22 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    background-color: #30343F;
+    border-color: #30343F;
+    color: white;
+}
+
+.button:hover {
+    background-color: #30343F;
+    border-color: #ff6f6c;
+    color: white;
+}
+
+.level {
+    padding:10px;
+    background-color: #30343F;
+}
