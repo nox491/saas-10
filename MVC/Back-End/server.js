@@ -4,7 +4,7 @@ const db = require("./models");
 
 //db.sequelize.sync({force : true});
 
-const port = 3001;
+const port = process.env.PORT || 3001;
  
  const server = http.createServer(app);
  
