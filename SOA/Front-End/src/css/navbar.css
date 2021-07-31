@@ -1,0 +1,47 @@
+.navbar {
+  background-color: #30343F;
+  }
+
+  a.navbar-item:hover, a.navbar-item.is-active {
+    background-color: transparent;
+    color: #6f42c1;
+}
+  .navbar-item {
+    color: #ff6f6c;
+  }
+
+  #signup {
+    color: #ff6f6c;
+    background-color: transparent;
+    border-color: #ff6f6c;
+  }
+
+  #signup:hover {
+    background-color: #6f42c1;
+    color: #30343F;
+    border-color: #6f42c1;
+  }
+
+  #login {
+    color:#30343F;
+    background-color: #ff6f6c;
+    border-color: #ff6f6c;
+  }
+
+  #login:hover {
+    background-color: #6f42c1;
+    color: white;
+    border-color: #30343F;
+  }
+
+  #logout {
+    color:#30343F;
+    background-color: #ff6f6c;
+    border-color: #ff6f6c;
+  }
+
+  #logout:hover {
+    background-color: #6f42c1;
+    color: white;
+    border-color: #30343F;
+  }

@@ -1,0 +1,29 @@
+#perperiodtitle {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#dateRangePicker {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.periodtable {
+    border: 1px solid gray;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+thead {
+    text-align: left;
+}
+
+#periodchart {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
